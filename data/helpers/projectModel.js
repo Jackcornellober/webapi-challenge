@@ -3,13 +3,18 @@ const mappers = require('./mappers');
 
 module.exports = {
   get,
+  getById,
   insert,
   update,
   remove,
   getProjectActions,
 };
 
-function get(id) {
+function get() {
+  return db('projects');
+}
+
+function getById(id) {
   let query = db('projects as p');
 
   if (id) {
@@ -38,14 +43,14 @@ function get(id) {
 function insert(project) {
   return db('projects')
     .insert(project)
-    .then(([id]) => this.get(id));
+    .then(([id]) => this.getById(id));
 }
 
 function update(id, changes) {
   return db('projects')
     .where('id', id)
     .update(changes)
-    .then(count => (count > 0 ? this.get(id) : null));
+    .then(count => (count > 0 ? this.getById(id) : null));
 }
 
 function remove(id) {
