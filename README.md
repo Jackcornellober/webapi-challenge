@@ -51,7 +51,10 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [x] How can we partition our application into sub-applications?
 
-    
+    You can have separate files that hold all of your requests/methods for different parts of your domain.
+    with server.use, we can control what files we draw our requests/middleware from on different paths.
+
+    For example: server.use("/pathOne", FileOne); //// server.use("/pathTwo", FileTwo)
 
 ## Project Setup
 
