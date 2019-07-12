@@ -24,15 +24,34 @@ In this challenge, create a web API around the following resources: `Projects` a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [x] Mention two parts of Express that you learned about this week.
+    Express is a lightweight framework.
 
-- [ ] Describe Middleware?
+    Express allows for the use of Middleware to respond to HTTP requests. Middleware is used a lot in express due to the fact that it's so lightweight.
+    Instead of including everything a dev might end up needing in Express, it's left to the dev to add middleware for these things. That keeps Express sleek.
 
-- [ ] Describe a Resource?
+- [x] Describe Middleware?
 
-- [ ] What can the API return to help clients know if a request was successful?
+    A piece of middleware is a function which interacts with an HTTP request in an intermediary fashion, inbetween the time where it's sent out and the main functionality of the request is carried out.
 
-- [ ] How can we partition our application into sub-applications?
+- [x] Describe a Resource?
+
+    "Everything is a resource" -LuisHRD 2019
+
+    Every piece of data stored on our server is a resource.
+
+- [x] What can the API return to help clients know if a request was successful?
+
+    Specific HTTP codes which express the nature of the request results. 
+
+    404: resource not found
+    200: We did it
+    500: Internal server error
+    ...etc
+
+- [x] How can we partition our application into sub-applications?
+
+    
 
 ## Project Setup
 
